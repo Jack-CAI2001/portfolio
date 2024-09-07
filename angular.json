@@ -105,9 +105,7 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "baseHref": "/portfolio/",
-            "repo": "https://github.com/Jack-CAI2001/portfolio.git",
-            "push": false,
-            "add": true
+            "repo": "https://github.com/Jack-CAI2001/portfolio.git"
           }
         }
       }
