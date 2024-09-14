@@ -1,0 +1,11 @@
+<p>navbar works!</p>
+<h1>Angular Router App</h1>
+<nav>
+  <ul>
+    <li *ngFor="let route of routes">
+      <a routerLink="{{route.path}}" routerLinkActive="active" >{{
+          capitalizeFirstLetter(route.path)
+        }}</a>
+    </li>
+  </ul>
+</nav>
