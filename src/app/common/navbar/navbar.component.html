@@ -1,11 +1,30 @@
-<p>navbar works!</p>
-<h1>Angular Router App</h1>
 <nav>
-  <ul>
-    <li *ngFor="let route of routes">
-      <a routerLink="{{route.path}}" routerLinkActive="active" >{{
-          capitalizeFirstLetter(route.path)
-        }}</a>
-    </li>
-  </ul>
+  <div class="navbar">
+    <div>
+      <h2>&lt;Jack <span class="primary">CAI</span> /&gt;</h2>
+    </div>
+    <p-tabMenu class="desktop-element" [model]="routes" />
+    <div class="mobile-element">
+      <button (click)="toggleButtonState()"  class="button-one" aria-controls="primary-navigation" [attr.aria-expanded]="overlayVisible">
+        <svg fill="var(--button-color)" viewBox="0 0 100 100" width="30">
+          <rect class="line top" width="80" height="10" x="10" y="25" rx="5">
+          </rect>
+          <rect class="line middle" width="80" height="10" x="10" y="45" rx="5">
+          </rect>
+          <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5">
+          </rect>
+        </svg>
+      </button>
+      <p-sidebar [modal]="false" showCloseIcon="false" [(visible)]="overlayVisible" position="right">
+        <ng-template pTemplate="headless">
+          <p-tabMenu styleClass="sideBar" [model]="routes" />
+        </ng-template>
+      </p-sidebar>
+    </div>
+  </div>
+</nav>
+<nav>
+  <div class="emptyNavBar">
+    <p-tabMenu [model]="routes" />
+  </div>
 </nav>

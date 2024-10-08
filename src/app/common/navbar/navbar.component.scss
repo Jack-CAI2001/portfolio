@@ -1,0 +1,75 @@
+::ng-deep .p-sidebar-right{
+  margin-right: 1rem;
+  top: auto;
+  right: 0;
+  width: auto;
+  height: auto;
+}
+
+
+:host ::ng-deep {
+  .sideBar {
+    .p-tabmenu-nav {
+      display: block;
+      border-radius: 30px;
+    }
+    .p-menuitem-link {
+      border: none;
+    }
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    a {
+      width:100%
+    }
+  }
+}
+
+.navbar {
+padding-left: 2em;
+padding-right: 2em;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+background-color: white;
+width:100%;
+position: fixed;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.emptyNavBar {
+width:100%;
+visibility: hidden;
+}
+
+.button-one:hover {
+cursor: pointer;
+}
+
+.button-one .line {
+transition: y 150ms ease-in 150ms, rotate 150ms ease-in, opacity 0ms 150ms;
+transform-origin: center;
+}
+
+.button-one[aria-expanded="true"] .line {
+transition: y 150ms ease-in, rotate 150ms ease-in 150ms, opacity 0ms 150ms;
+}
+
+.button-one[aria-expanded="true"] :is(.top, .bottom) {
+y: 45;
+}
+
+.button-one[aria-expanded="true"] .top {
+rotate: 45deg;
+}
+
+.button-one[aria-expanded="true"] .middle {
+opacity: 0;
+}
+
+.button-one[aria-expanded="true"] .bottom {
+rotate: -45deg;
+}
+
+button {
+background: transparent;
+border: none;
+}
