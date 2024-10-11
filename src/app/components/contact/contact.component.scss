@@ -1,0 +1,47 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+}
+
+.marginTop {
+  margin-top: 4rem;
+}
+
+.noPaddingNoMargin {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: fit-content;
+  display: grid;
+  gap:5rem;
+}
+
+.socials {
+  place-self: center;
+}
+
+@media (min-width: 600px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .socials {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1/-1;
+  }
+}
+
+.svg-icon {
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.icon-container  .svg-icon:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
