@@ -1,0 +1,20 @@
+<div class="content">
+  <div class="pdBottom" *ngFor="let card of cards">
+    <p-card>
+      <ng-template pTemplate="title">
+        <div class="center">
+          <p>{{card.title}} {{card.date}}</p>
+          <img class="img" ngSrc=".{{card.company_logo}}" width="1" height="1"/>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="subtitle">
+        <div class="center">Position: {{card.position}}
+        <img class="img" ngSrc=".{{card.position_logo}}" width="1" height="1"/></div>
+      </ng-template>
+      <div [innerHTML]="card.description">
+
+      </div>
+    </p-card>
+  </div>
+</div>
+
