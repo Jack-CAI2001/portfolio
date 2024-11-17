@@ -1,0 +1,12 @@
+.center {
+  display: flex;align-items: center; gap: 1rem;
+}
+
+.img {
+  height: 2rem;
+  width: auto;
+}
+
+::ng-deep .p-card .p-card-content {
+  padding: 0;
+}

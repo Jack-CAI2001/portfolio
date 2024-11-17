@@ -2,21 +2,23 @@ import {Component, OnInit} from '@angular/core';
 import {NgForOf, NgOptimizedImage} from "@angular/common";
 import {CardModule} from "primeng/card";
 import {CarouselModule} from "primeng/carousel";
+import {CardComponent, ExperienceCard} from "../../common/card/card.component";
 
 @Component({
-  selector: 'app-about',
+  selector: 'app-experience',
   standalone: true,
   imports: [
     NgForOf,
     CardModule,
     CarouselModule,
-    NgOptimizedImage
+    NgOptimizedImage,
+    CardComponent
   ],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss'
 })
 export class ExperienceComponent implements OnInit {
-  cards: Card[] = [];
+  cards: ExperienceCard[] = [];
   ngOnInit(): void {
     this.cards = [
       {
@@ -37,13 +39,4 @@ export class ExperienceComponent implements OnInit {
       }
     ];
   }
-}
-
-export interface Card {
-  title: string;
-  position: string;
-  company_logo: string;
-  position_logo: string;
-  date: string;
-  description: string;
 }

@@ -1,0 +1,22 @@
+<p-card>
+  <ng-template pTemplate="title">
+    <div class="center">
+      <p>{{card.title}} {{card.date}}</p>
+      <img *ngIf="isExperienceCard(card)" class="img" ngSrc=".{{card.company_logo}}" width="1" height="1"/>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="subtitle">
+    <div *ngIf="isProjectCard(card)">
+      <div class="center">Stack used:
+        <div pTooltip="{{card.stack_logo_tooltip[i]}}" tooltipPosition="top" *ngFor="let img of card.stack_logo; let i = index">
+          <img class="img" ngSrc=".{{img}}" width="1" height="1"/>
+        </div>
+      </div>
+      <div *ngIf="card.description.length != 0" class="center">Features:</div>
+    </div>
+    <div *ngIf="isExperienceCard(card)" class="center">Position: {{card.position}}
+      <img class="img" ngSrc=".{{card.position_logo}}" width="1" height="1"/>
+    </div>
+  </ng-template>
+  <div [innerHTML]="card.description"></div>
+</p-card>
