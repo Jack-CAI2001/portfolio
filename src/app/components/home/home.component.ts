@@ -24,7 +24,7 @@ import {Button} from "primeng/button";
 })
 export class HomeComponent {
   protected downloadCV() {
-    const pdfUrl = '/CAIJack.pdf'
+    const pdfUrl = './CAIJack.pdf'
     const pdfName = "CV_Jack_CAI.pdf"
     const link = document.createElement('a');
     link.href = pdfUrl;
